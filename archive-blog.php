@@ -6,11 +6,7 @@
         <h2 class = "c-title--page u-mb50">
           ブログ
         </h2>
-        <!--
-        <p class = "c-mainVisualPage__txt">
-          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-        </p>
-        -->
+       
       </div>
       <figure class = "c-mainVisualPage__imgWrap">
         <img src = "<?php echo get_template_directory_uri(); ?>/dist/img/common/archive03.jpg" alt = "メインビジュアル">
