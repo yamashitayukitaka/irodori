@@ -1,0 +1,32 @@
+.l-content {
+  width:92%;
+  margin: 0 auto;
+  &--large{
+    width: 1015px;
+    margin: 0 auto;
+    @include mq(xll){
+      width: 92%;
+    }
+  }
+  &--middle{
+    width: 940px;
+    margin:0 auto;
+    @include mq(smg){
+      width: 92%;
+    }
+  }
+  &--small{
+    width: 840px;
+    margin: 0 auto;
+    @include mq(smg){
+      width: 92%;
+    }
+  }
+  &--mostLarge{
+    width: 1280px;
+    margin: 0 auto;
+    @include mq(xll){
+      width: 92%;
+    }
+  }
+}

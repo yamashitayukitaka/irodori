@@ -1,0 +1,135 @@
+.p-line-up{
+  &__img{
+    &__wrap{
+      width: 525px;
+      height: 690px;
+      @include mq(lg){
+        width: 100%;
+        height: 30vh;
+      }
+    }
+  }
+  &__content{
+    display: flex;
+    @include mq(lg){
+      flex-direction: column;
+      width: 100%;
+    }
+    &:last-of-type{
+      flex-direction: row-reverse;
+      @include mq(lg){
+        flex-direction: column;
+        width: 100%;
+      }
+      & .p-line-up__img__wrap{
+        margin-left:initial;
+        margin-right: 20px;
+      }
+      & .p-line-up__slider__next{
+        left: 75% !important;
+        @include mq(sm){
+          left: 65% !important;
+        }
+      }
+      & .p-line-up__slider__prev{
+        left: 92% !important;
+        @include mq(sm){
+          left: 85% !important;
+        }
+      }
+    }
+  }
+  &__txt{
+    font-size:1.4rem;
+    font-family: $NotoSerif;
+    letter-spacing: 0.1em;
+    &__outer{
+      padding-top: 100px;
+      position: relative;
+      overflow: hidden;
+      height: 750px;
+      @include mq(lg){
+        padding-top:20px;
+        height: auto;
+      }
+    }
+    &__wrap{
+      padding:20px 40px 40px 70px;
+      display: auto;
+      width: 735px;
+      background: rgba(196, 190, 184, 0.2);
+      @include mq(lg){
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+    }
+    &__ttl{
+      font-size:3rem;
+      font-family: $NotoSerif;
+      margin-bottom: 15px;
+      @include mq(){
+
+      }
+    }
+  }
+  &__slider{
+    &__list{
+      width: 788px;
+      position: absolute !important;
+      position: relative;
+      bottom:50px;
+      left:70px;
+      @include mq(lg){
+        width: calc(100% + 5px);
+        left: initial;
+        bottom: initial;
+        position: initial !important;
+        margin-bottom: 40px;
+      }
+      &--bottom{
+        @extend .p-line-up__slider__list;
+        left: initial;
+        right:70px !important;
+      }
+      & .slick-slide{
+        &:nth-of-type(1){
+          margin-left: 0 !important;
+        }
+        margin:5px;
+      }
+    }
+    &__item{
+     height: 240px;
+    }
+    &__next{
+      left: 0 !important;
+      top: 105% !important;
+      height: 31px !important;
+      width: 31px !important;
+      background: url(../dist/img/staff/staffNext.png) !important;
+      background-size: cover !important;
+      &::before{
+        display: none;
+      }
+    }
+    &__prev{
+      @extend .p-line-up__slider__next;
+      background: url(../dist/img/staff/staffPrev.png) !important;
+      background-size: cover !important;
+      left: initial !important;
+      right: 0;
+      &::before{
+        display: none;
+      }
+    }
+    &__next{
+      height: 31px !important;
+      width: 31px !important;
+    }
+  }
+}
+
+.slick-slider .slick-track{
+  display: flex;//slickのスライダーが  slidesToShowより少ない場合はスタイルが崩れる場合があるのでcssで修正する
+}

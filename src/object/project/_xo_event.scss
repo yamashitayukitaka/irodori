@@ -1,0 +1,128 @@
+.xo-event__wrap{
+  width: 50%;
+  @include mq(lg){
+    width: 100%;
+    margin:0 auto 100px;
+  }
+  @include mq(sm){
+    margin:0 auto 20px;
+  }
+}
+
+.xo-event-calendar{
+  width: 434px;
+  overflow: initial !important;
+  @include mq(lg){
+    width: 100%;
+  }
+}
+
+.xo-event-calendar table.xo-month>thead th.sunday{
+  background: #FFA5A5;
+  color:#fff !important;
+}
+
+.xo-event-calendar table.xo-month{
+  border: none !important;
+}
+
+.xo-event-calendar table.xo-month>thead th{
+  background: #E1DEDB;
+  padding: 12px 0px 15px !important;
+  font-size: 11px !important;
+  font-weight:normal !important;
+  text-align: center;
+}
+
+.xo-event-calendar table.xo-month>thead th.saturday{
+  background:#A0B2FF;
+  color:#fff;
+}
+
+.xo-event-calendar table.xo-month .month-dayname-space{
+  height: 100%;
+}
+
+.xo-event-calendar table.xo-month .month-event{
+  display: none;
+}
+
+.xo-event-calendar table.xo-month td a{
+  @include mq(){
+    display: block;
+    margin-top: 10px;
+  }
+}
+
+.xo-event-calendar table.xo-month .month-dayname td div {
+  text-align: center !important;
+  padding: 6px !important;
+  font-size: 14px !important;
+  border-radius: 50%;
+  margin: auto;
+  width: 27px;
+  height: 27px !important;
+  background: #00C000;
+  color:#fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.xo-event-calendar table caption, .xo-event-calendar table tbody, .xo-event-calendar table td, .xo-event-calendar table tfoot, .xo-event-calendar table th, .xo-event-calendar table thead, .xo-event-calendar table tr{
+  height: 42px;
+}
+
+.xo-event-calendar table caption, .xo-event-calendar table tbody, .xo-event-calendar table td, .xo-event-calendar table tfoot, .xo-event-calendar table th, .xo-event-calendar table thead, .xo-event-calendar table tr{
+  padding: 7px !important;
+}
+
+.xo-event-calendar table.xo-month td, .xo-event-calendar table.xo-month th{
+  border: none !important;
+}
+
+.xo-event-calendar table.xo-month .month-dayname td div.other-month{
+  background: #fff;
+  color:rgba($color: #000000, $alpha: 0.5);
+  cursor:default;
+}
+
+.xo-event-calendar table.xo-month .month-dayname td div{
+  position: relative;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.other-month{
+  display: none;
+}
+
+
+
+.xo-event-calendar table.xo-month button span.nav-prev{
+  position: relative !important;
+  left: 15px !important;
+}
+
+.xo-event-calendar table.xo-month button span.nav-next{
+  position: relative !important;
+  right: 30px !important;
+}
+
+.xo-event-calendar table.xo-month button{
+  overflow:initial !important;
+  width: 0 !important;
+}
+
+/*.xo-event-calendar table caption, .xo-event-calendar table tbody, .xo-event-calendar table td, .xo-event-calendar table tfoot, .xo-event-calendar table th, .xo-event-calendar table thead, .xo-event-calendar table tr{
+  height: auto !important;
+}*/
+
+.xo-event-calendar table.xo-month .month-week{
+  height: 50px;
+}
+
+.xo-event-calendar table.xo-month .month-event-space{
+  display: none;
+}
+

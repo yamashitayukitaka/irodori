@@ -1,0 +1,213 @@
+.p-exterior-works{
+  &__mv{
+    margin-bottom: 150px;
+    height:calc(var(--windowHeight) - var(--headerHeight));
+    &__txt{
+      max-width: 35%;
+      height: auto;
+      background: #fff;
+      position: absolute;
+      top: 65%;
+      left: 10%;
+      z-index: 9;
+      font-family: $NotoSerif;
+      padding: 0 5px;
+      @include mq(){
+        width: 75%;
+      }
+    }
+    &__tag{
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      z-index: 9;
+    }
+    &__tagTxt{
+      color:#000;
+      font-family: $NotoSerif;
+      background:rgb(213, 211, 211);
+      padding: 0 5px;
+      &:nth-of-type(2){
+        margin-left: 10px;
+      }
+    }
+    &__ttl{
+      color: #fff;
+      position: absolute;
+      top: 55%;
+      left: 10%;
+      z-index: 9;
+      font-family: $NotoSerif;
+      font-size: 24px;
+    }
+  }
+  &__btnList{
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    transform: translateX(-5px);
+    & .active{
+      background: #C4BEB8;
+      color: #fff;
+      border:none;
+    }
+    &__item{
+      margin-bottom: 5px;
+      margin-left: 5px;
+    }
+  }
+  &__btn{
+    width: 151px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #707070;
+    font-size: 10px;
+    border-radius: 4px;
+  }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    justify-content: space-around;
+    
+  }
+  &__listTtl{
+    font-family: $yuMincho;
+    font-size: 13px;
+    text-align: center;
+    padding-top: 25px;
+    margin-bottom: 20px;
+  }
+  &__item{
+    width: calc(250/1015*100%);
+    @include mq(smg){
+      width:calc(50% - 10px);
+    }
+    @include mq(sm){
+      width: 100%;
+    }
+    &__imgWrap{
+      width: 100%;
+      aspect-ratio: 3/2;
+      height: initial !important;
+    }
+    &:nth-of-type(4n+1){
+      margin-left: 0 !important;
+    }
+  }
+  &__listTag{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 77px;
+    height: 24px;
+    font-size: 11px;
+    background: rgba(112, 112, 112, 0.15);
+    margin-bottom: 20px;
+  }
+  &__listTagWrap{
+    width: 165px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__imgSection{
+    &__inner{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 150px;
+    }
+  }
+  &__singleMv{
+    height: 100vh;
+    padding-top:60px;
+    &__imgWrap{
+      width: 100%;
+      aspect-ratio: 792/528;
+      position: relative;
+    }
+    &__txtWrap{
+      background: #fff;
+      position: absolute;
+      top: calc(31/528 * 100%);
+      left: 0;
+      width: 245px;
+      padding: 12px 13px;
+      border-left:solid 2px #00C000;
+    }
+    &__ttl{
+      font-size: 1.8rem !important;
+      margin-bottom: 15px;
+      letter-spacing:0.04em;
+    }
+    &__txt{
+      font-size: 9px
+    }
+    &__info{
+      position: absolute;
+      display: inline-block;
+      left: 10%;
+      top: 59%;
+      color: #fff;
+      z-index: 9;
+      font-family: $NotoSerif;
+    }
+  }
+  &__article{
+    width: 85%;
+    margin-bottom:150px;
+    position: relative;
+    @include mq(){
+      width: 100%;
+    }
+    &:nth-of-type(2n){
+      margin-left: auto;
+      & .p-exterior-works__article__txtWrap{
+        left: 50%;
+      }
+      & .p-exterior-works__article__subImg{
+        margin-left: 0;
+      }
+    }
+    &__VideoImgWrap{
+      width: 100%;
+      height:50vh;
+      overflow: hidden;
+      margin-bottom: 50px;
+    }
+    &__txtWrap{
+      background: #fff;
+      width: 50%;
+      position: absolute;
+      top:45vh;
+      left: 0;
+      padding:25px 30px;
+      @include mq(){
+        width: 100%;
+        position: initial;
+      }
+    }
+    &__ttl{
+      font-family: $NotoSerif;
+      font-size:2.4rem;
+      margin-bottom: 5px;
+    }
+    &__txt{
+      font-family: $NotoSerif;
+      font-size:1.6rem;
+    }
+    &__subImg{
+      width: 20%;
+      height: 300px;
+      margin-left: auto;
+      @include mq(){
+        width: 100%;
+      }
+    }
+  }
+}

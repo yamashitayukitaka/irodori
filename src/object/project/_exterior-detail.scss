@@ -1,0 +1,65 @@
+.p-exterior-detail{
+  &__imgSection{
+    margin-bottom: 150px;
+  }
+  &__article{
+    width: 100%;
+    height:calc(100vh - 200px);
+    margin-bottom: 200px;
+    position: relative;
+    @include mq(lg){
+      height: initial;
+      aspect-ratio:4/5;
+    }
+    @include mq(){
+      margin-bottom: 50px;
+    }
+    @include mq(sm){
+      aspect-ratio: 2/3;
+    }
+    &:nth-of-type(2n){
+      & .p-exterior-detail__article__txtWrap{
+        left: 50%;
+        @include mq(lg){
+          left: 0;
+        }
+      }
+    }
+    &__txtWrap{
+      top: 0;
+      left:0%;
+      width: 50%;
+      padding-top:calc((100vh - 200px)/2);
+      height:calc(100vh - 200px);
+      position: absolute;
+      @include mq(lg){
+        padding-top: 50px;
+        width: 100%;
+        height: var(--articleHeight);
+      }
+      @include mq(sm){
+        padding-top: 10px;
+      }
+    }
+    &__txtWrapInner{
+      position: sticky;
+      top: 50%;
+      padding:0 50px 50px 50px;
+      @include mq(sm){
+        padding: 10px;
+      }
+    }
+    &__ttl{
+      text-align: center;
+      font-family: $NotoSerif;
+      font-weight: bold;
+      font-size:2.4rem;
+      margin-bottom: 15px;
+    }
+    &__txt{
+      font-size:1.6rem;
+      font-family: $NotoSerif;
+      font-weight: bold;
+    }
+  }
+}

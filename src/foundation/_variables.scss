@@ -1,0 +1,23 @@
+// Font
+$yuGothic: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+$yuMincho:'Noto Serif JP', serif;
+$montserrat: "Montserrat", sans-serif;
+$NotoSerif:'Noto Serif JP', serif;
+$Sippori:"Shippori Antique B1", sans-serif;
+
+// メディアクエリ
+$breakpoints: (
+  "sm": "screen and (max-width: 520px)",
+  "md": "screen and (max-width: 768px)",
+  "smg": "screen and (max-width: 940px)",
+  "lg": "screen and (max-width: 1025px)",
+  "xl": "screen and (max-width: 1200px)",
+  "xll": "screen and (max-width: 1320px)",
+  "xxl": "screen and (max-width: 1400px)",
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}

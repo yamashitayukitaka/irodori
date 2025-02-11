@@ -1,0 +1,107 @@
+.l-footer{
+  background:#707070;
+  padding:30px 0 0;
+  position: relative;
+  &__inner{
+    width: 768px;
+    margin: auto;
+    @include mq(){
+      width: 92%;
+    }
+  }
+  &__ttl{
+    text-align: center;
+    font-size:3rem;
+    color:#fff;
+    margin-bottom: 16px;
+  }
+  &__address{
+    text-align: center;
+    font-size: 12px;
+    color:#fff;
+    margin-bottom: 35px;
+  }
+  &__line{
+     display: block;
+     width: 100%;
+     margin: auto;
+     height: 3px;
+     background: #fff;
+  }
+  &__list{
+    &__outer{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 3.7rem;
+    }
+    &__term{
+      font-family: $yuMincho;
+      font-size: 18px;
+      color: #fff;
+      margin-bottom: 35px;
+    }
+    &__item{
+      color:#fff;
+      font-size: 14px;
+    }
+    &__inner{
+      width:60%;
+      text-align: center;
+      margin-bottom: 30px;
+      @include mq(sm){
+        width: 85%;
+      }
+    }
+  }
+  &__bottom{
+    display: flex;
+    padding: 40px 65px;
+    @include mq(sm){
+      padding:40px 10px;
+    }
+    @include mq(){
+      flex-direction: column;
+    }
+    justify-content: space-between;
+    &__snsIcon{
+      margin-left: 20px;
+      display:inline-block;
+    }
+    &__sns{
+      margin: auto;
+      width: 200px;
+    }
+  }
+  &__copy{
+    text-align: center;
+    background: #fff;
+    display: block;
+    padding:45px 0 10px;
+    font-family: $yuMincho;
+    color:#707070;
+  }
+  &__list{
+    display: flex;
+    &__itemSmall{
+      display: block;
+      font-size:8px;
+      color:#fff;
+    }
+    &__flex{
+      width: 50%;
+    }
+  }
+  &__link{
+    margin-left: 10px;
+    &__wrap{
+      display: flex;
+      @include mq(){
+        justify-content: space-between;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+
+ 

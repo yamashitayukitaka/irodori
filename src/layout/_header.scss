@@ -1,0 +1,72 @@
+.l-header {
+  background: #fff;
+  height:115px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999999;
+  @include mq(){
+    height: initial;
+  }
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  &__logo{
+    width:11rem;
+    height:11rem;
+  }
+  &__insta{
+    position:relative;
+    top: -2px;
+  }
+}
+
+#wpadminbar{
+  position: fixed !important;
+  top:initial !important;
+  bottom: 0 !important;
+}
+
+#wpadminbar .show-template-name, #wpadminbar .hover .show-template-name{
+  color: #fff;
+}
+
+
+#loading{
+  width:100vw;
+  height:100vh;
+  background: #fff;
+  position: fixed;
+  z-index: 99999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+}
+
+.spinner{
+  display: inline-block;
+  width: 25rem;
+  animation: spin 2s linear 1;
+  text-align: center;
+}
+
+@keyframes spin {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.loaded {
+  opacity: 0;
+  //visibility: hidden;
+  display: none !important;
+}
+

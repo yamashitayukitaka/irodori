@@ -1,0 +1,37 @@
+.c-mainVisualPage{
+    height: calc(var(--windowHeight) - var(--headerHeight));
+    display: flex;
+    width:calc(1040/1280 *100%);
+    margin-left: auto;
+    @include mq(smg){
+      height: 700px;
+      width: 100%;
+      flex-direction: column-reverse;
+    }
+  &__imgWrap{
+    width: calc(535/1040*100%);
+    border-bottom-left-radius: 50px;
+    overflow: hidden;
+    height: calc(100% - 80px);
+    @include mq(smg){
+      width: 100%;
+      height: calc(60vh - 80px);
+    }
+  }
+  &__txtWrap{
+    padding-top: 250px;
+    width: calc(505/1040*100%);
+    @include mq(smg){
+      width: 92%;
+      margin: auto;
+      padding-top: 100px;
+    }
+  }
+  &__txt{
+    width: calc(412/505 *100%);
+    @include mq(smg){
+      width: 100% !important;
+      margin: auto;
+    }
+  }
+}

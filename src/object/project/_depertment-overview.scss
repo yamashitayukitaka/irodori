@@ -1,0 +1,19 @@
+.p-depertment-overview{
+  background: url(../dist/img/top/combg.jpg);
+  background-size: cover !important;
+  background-attachment:fixed!important;
+  padding:200px 0;
+  position: relative;
+  margin-bottom: 150px;
+  justify-content: center;
+  align-items: center;
+  @include mq(sm){
+    padding: 150px 0;
+  }
+  &__ttl{
+    position: relative;
+    z-index: 99;
+    width: 80%;
+    margin: auto;
+  }
+}

@@ -1,0 +1,68 @@
+.p-recruit-department{
+  position: relative;
+ 
+  &__logo{
+    width: 165px;
+    height: 48px;
+    margin: 0 auto 30px;
+  }
+  &__list{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    &__item{
+      background:#FEF5F6;
+      width: 30%;
+      margin-bottom: 50px;
+      @include mq(smg){
+        width: 45%;
+      }
+      @include mq(sm){
+        width: 100%;
+      }
+    }
+    &__type{
+      width:100%;
+      height: 61px;
+      font-size: 24px;
+      color:#fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #00C000;
+    }
+    &__inner{
+      background: #FEF5F6;
+      padding: 38px 0;
+      width: 85%;
+      margin: auto;
+    }
+    &__img{
+      width: 100%;
+      height: 174px;
+      margin-bottom: 35px;
+    }
+    &__txt{
+      font-family: $yuMincho;
+      font-size: 14px;
+      width: 100%;
+      margin-bottom: 35px;
+      line-height: calc(30/14);
+    }
+    &__button{
+      border:none !important;
+      background: #fff;
+      margin-bottom: 25px !important;
+      width: 100% !important;
+    }
+  }
+  &__bottomButton{
+    margin: 0 !important;
+    &__wrap{
+      display: flex;
+      width: 550px;
+      margin: auto;
+      justify-content: space-between;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+.c-overlay{
+  position: relative;
+  overflow: hidden;
+  //background:rgb(82, 226, 82);
+  &__after{
+    &::after{
+      opacity: 0 !important;
+    }
+  }
+  &::after{
+    background:rgb(82, 226, 82);
+    opacity: .2;
+    content:"";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include mq(){
+      opacity: 0;
+    }
+  }
+  &__img{
+    display: block;
+    width: calc(100% + 20px);
+    transform: translateX(-20px);
+    &__wrap{
+      width: 100%;
+      display: block;
+      overflow: hidden;
+    }
+  }
+  &__anime{
+    animation-name: translate;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    @include mq(){
+      animation:none;
+    }
+  }
+  &--delay{
+  position: relative;
+  overflow: hidden;
+    &:hover.c-overlay--delay::after{ //.c-overlay 要素と ::after 擬似要素は直接隣接しているため、スペースが必要ありません。
+      transition-property: all;
+      transition-delay:.5s;
+      opacity: 0;
+    }
+    &:hover .c-overlay__txt--delay{
+      transition-property: all;
+      transition-delay:.5s;
+      transition-duration: .5s;
+      top: 45%;
+      @include mq(){
+        top: 50%;
+      }
+    }
+    &:hover .c-overlay__img--delay{
+      animation-delay: .5s;
+      animation-name: translate;
+      animation-duration: .5s;
+      animation-fill-mode: forwards;
+      @include mq(){
+        animation: none;
+      }
+    }
+    &::after{
+      background:rgb(82, 226, 82);
+      opacity: .2;
+      content:"";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include mq(){
+        opacity: 0;
+      }
+    }
+  }
+  &__img--delay{
+    display: block;
+    width: calc(100% + 20px);
+    transform: translateX(-20px);
+  }
+  &__txt--delay{
+    font-size: 20px;
+  }
+}
+
+
+

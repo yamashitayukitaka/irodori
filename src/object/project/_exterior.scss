@@ -1,0 +1,321 @@
+.p-exterior{
+  &__lineUp{
+    margin-bottom: 150px;
+    &__content{
+      position: relative;
+      margin-bottom: 50px;
+      z-index: 9999;
+      opacity: 0;
+    }
+    &__list{
+      width: 100%;
+      margin: auto;
+      display: flex;
+      @include mq(){
+        flex-direction: column;
+      }
+      &::after{
+        position: absolute;
+        content:"";
+        display: block;
+        height: 100%;
+        width: 2px;
+        background: #fff;
+        z-index: 9999;
+        top: 0;
+        left: 50%;
+        @include mq(){
+          display: none;
+        }
+      }
+    }
+    &__videoWrap{
+      width: 100%;
+      overflow: hidden;
+      height: 60vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      @include mq(){
+        position: initial;
+        margin-bottom:30px;
+      }
+    }
+    &__item{
+      display: block;
+      width:50%;
+      height: 60vh;
+      overflow: hidden;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      @include mq(){
+        width: 100%;
+        height: 30vh;
+        opacity: 1 !important;
+        margin-bottom: 30px;
+      }
+    }
+    &__img{
+      margin-bottom: 10px;
+    }
+    &__itemTtl{
+      text-align: center;
+      font-size:1.8rem;
+      position: absolute;
+      color: #fff;
+      font-family:$NotoSerif;
+      top:50%;
+      left:40px;
+      text-align: left;
+      line-height: 1.2;
+    }
+  }
+  &__company{
+    &__ttlWrap{
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 70px;
+    }
+    &__content{
+      display: flex;
+      @include mq(xl){
+        flex-direction: column;
+      }
+    }
+    &__imgWrap{
+      opacity: 0;
+      width: calc(380/1280*100%);
+      height: 563px;
+      overflow: hidden;
+      &--right {
+        @extend .p-exterior__company__imgWrap;
+        position: relative;
+        height: 222px;
+        top: calc(var(--ttlWrapHeight) * -1);
+        & img{
+          height: auto !important;
+        }
+      }
+      @include mq(xl){
+        width: 100%;
+        height: 300px;
+        margin-bottom: 30px;
+      }
+    }
+    &__txtWrap{
+      width: calc(380/1280*100%);
+      margin: 0 auto;
+      padding-top: 100px;
+      @include mq(xl){
+        padding-top: 30px;
+        width: 100%;
+        margin: 0 auto 70px;
+      }
+    }
+    &__txtTtl{
+      font-size:3.2rem;
+      font-family: $NotoSerif;
+      text-align: center;
+      letter-spacing: 0.04em;
+      color: #000;
+      font-weight:lighter;
+      &--sub{
+        @extend .p-exterior__company__txtTtl;
+        font-size:1.6rem;
+        display: block;
+        margin-bottom: 50px;
+      }
+    }
+    &__txt{
+      font-size:1.6rem;
+      font-family: $NotoSerif;
+      text-align: center;
+      letter-spacing: 0.04em;
+      line-height: calc(40/15);
+    }
+  }
+  &__works{
+    margin-bottom: 150px;
+    &__list{
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      position: relative;
+      @include mq(){
+        width: 92%;
+        margin: auto;
+      }
+      & .slick-slide{
+        padding: 0 5px;
+      }
+      & .slick-prev{
+        border-top:solid 2px gray;
+        border-left:solid 2px gray;
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 30%;
+        left:-15px;
+        &:before{
+          display: none;
+        }
+      }
+      & .slick-next{
+        border-top:solid 2px gray;
+        border-right:solid 2px gray;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 30%;
+        right:-15px;
+        &:before{
+          display: none;
+        }
+      }
+    }
+    &__listTtl{
+      font-family: $NotoSerif;
+      font-size: 13px;
+      text-align: center;
+      padding-top: 25px;
+      margin-bottom: 20px;
+    }
+    &__item{
+      width: calc(250/1015*100%);
+      margin-left:calc(4/1015*100%);
+      &:nth-of-type(4n+1){
+        margin-left: 0 !important;
+      }
+    }
+    &__listTag{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 77px;
+      height: 24px;
+      font-size: 7px;
+      background: rgba(112, 112, 112, 0.15);
+      margin-bottom: 20px;
+    }
+    &__listTagWrap{
+      width: 165px;
+      display: flex;
+      margin: auto;
+      justify-content: space-between;
+    }
+  }
+  &__flow{
+    margin-bottom: 150px;
+    &__inner{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 60px;
+      @include mq(){
+        flex-direction: column-reverse;
+        margin-bottom: 30px;
+      }
+    }
+    &__left{
+      width: (592/1015*100%);
+      @include mq(){
+        width: 100%;
+      }
+    }
+    &__imgWrap{
+      width: 100%;
+      margin-bottom: 150px;
+      @include mq(){
+        margin-bottom: 30px;
+      }
+    }
+    &__right{
+      width: (423/1015*100%);
+      @include mq(){
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+    &__rightImgWrap{
+      width: calc(245/423*100%);
+      height: 458px;
+      margin-left: auto;
+      position: relative;
+      overflow: hidden;
+      @include mq(){
+        width: 100%;
+        height: 300px;
+      }
+    }
+    &__txt{
+      font-size: 12px;
+      font-family: $NotoSerif;
+      letter-spacing:0.04em;
+      line-height: calc(42/12);
+      text-align: center;
+    }
+  }
+  &__staff{
+    margin-bottom: 150px;
+    &__list{
+      opacity: 0;
+      & .slick-slide{
+        margin:0  10px;
+      }
+    }
+    &__item{
+      aspect-ratio: 240/360;
+    }
+  }
+  &__blog{
+    margin-bottom: 150px;
+    &__content{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 60px;
+      @include mq(){
+        flex-direction: column;
+      }
+    }
+    &__rightImgWrap{
+      width: 370px;
+      display: block;
+      @include mq(){
+        height: 235px;
+        margin-bottom: 30px;
+        width: 100%;
+      }
+    }
+    &__leftImgWrap{
+      width:554px;
+      height: 523px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @include mq(){
+        height: initial;
+        justify-content: initial;
+        width: 100%;
+      }
+    }
+    &__leftImg{
+      display: block;
+      width:370px;
+      height:235px;
+      overflow: hidden;
+      &:nth-of-type(1){
+        @include mq(lg){
+          margin-left: auto;
+        }
+        @include mq(){
+          margin-bottom: 30px;
+        }
+      }
+      @include mq(){
+        margin-left: 0 !important;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,341 @@
+.u-font__bold {
+  font-weight: bold;
+  color: inherit;
+  line-height: inherit;
+}
+
+.u-none__pc {
+  // display: noneだけを付与するために、.u-none__pcではmin-widthを使う
+  &--xxl {
+    @media screen and (min-width: 1401px) {
+      display: none;
+    }
+  }
+  &--xl {
+    @media screen and (min-width: 1201px) {
+      display: none;
+    }
+  }
+  &--lg {
+    @media screen and (min-width: 1026px) {
+      display: none;
+    }
+  }
+  &--md {
+    @media screen and (min-width: 769px) {
+      display: none;
+    }
+  }
+  &--sm {
+    @media screen and (min-width: 521px) {
+      display: none;
+    }
+  }
+}
+.u-none__mobile {
+  &--xxl {
+    @include mq(xxl) {
+      display: none;
+    }
+  }
+  &--xl {
+    @include mq(xl) {
+      display: none;
+    }
+  }
+  &--lg {
+    @include mq(lg) {
+      display: none;
+    }
+  }
+  &--md {
+    @include mq() {
+      display: none;
+    }
+  }
+  &--sm {
+    @include mq(sm) {
+      display: none;
+    }
+  }
+}
+
+// アニメーション
+@keyframes flow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.u-mb0{
+  margin-bottom:0 !important;
+}
+
+.u-mb25{
+  margin-bottom: 2rem !important;
+}
+
+.u-mb25{
+  margin-bottom: 2.5rem;
+}
+
+.u-mb30{
+  margin-bottom: 3rem !important;
+}
+
+.u-mb35{
+  margin-bottom: 3.5rem;
+}
+
+.u-mb40{
+  margin-bottom: 4rem;
+}
+
+.u-mb45{
+  margin-bottom: 4.5rem;
+}
+
+.u-mb50{
+  margin-bottom: 5rem;
+}
+
+.u-mb60{
+  margin-bottom: 6rem !important;
+}
+
+.u-mb70{
+  margin-bottom: 7rem;
+}
+
+.u-mb80{
+  margin-bottom: 8rem !important;
+}
+
+.u-mb100{
+  margin-bottom: 10rem !important;
+}
+
+.u-mb120{
+  margin-bottom: 12rem;
+}
+
+.u-mb150{
+  margin-bottom: 15rem;
+}
+
+.u-pt20{
+  padding-top: 2rem;
+}
+
+.u-pt30{
+  padding-top: 3rem;
+}
+
+.u-pt40{
+  padding-top: 4rem;
+}
+
+.u-pt100{
+  padding-top: 10rem;
+}
+
+
+.u-alignCenter{
+ text-align: center !important;
+}
+
+.u-alignRight{
+  text-align: right;
+ }
+
+.u-marginAuto{
+  margin: auto;
+}
+
+.u-marginLeftAuto{
+  margin-left:auto;
+}
+
+.u-current{
+  background:#CBF2CB;
+  border:none !important;
+}
+
+.u-current--works{
+  background:#CBF2CB;
+  color: #000 !important;
+  border:none !important;
+}
+
+.u-white{
+  background: #fff;
+}
+
+.u-up {
+  opacity: 0;
+  transform: translateY(50px);
+  animation-fill-mode: forwards;
+  animation-duration: 2s; /* アニメーションの持続時間を0.5秒に設定 */
+  animation-name: up; /* 使用するアニメーション名を指定 */
+  animation-timing-function: ease-in-out; /* アニメーションのタイミング関数を指定 */
+}
+
+.u-sticky{
+  top:100px;
+  position:sticky !important;
+}
+
+@keyframes up {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.u-scale {
+  animation-fill-mode: forwards;
+  animation-duration: 4s; /* アニメーションの持続時間を0.5秒に設定 */
+  animation-name: scale; /* 使用するアニメーション名を指定 */
+  animation-timing-function: ease-in-out; /* アニメーションのタイミング関数を指定 */
+}
+
+@keyframes scale {
+  from {
+    opacity: .8;
+    transform: scale(1.2);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.u-mouse{
+  width: 24px;
+  height: 24px;
+  background:rgba(82, 226, 82,0.6);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  pointer-events: none;
+  animation-iteration-count: infinite; 
+  animation-duration: 2s; 
+  animation-name: scaleOpacity; /* 使用するアニメーション名を指定 */
+  animation-timing-function: ease-in-out; /* アニメーションのタイミング関数を指定 */
+  &__hovered{
+    opacity: .6;
+    animation-fill-mode: forwards;
+    animation-iteration-count:1;
+    animation-duration: .5s; 
+    animation-name: hoverScale; /* 使用するアニメーション名を指定 */
+    animation-timing-function: ease-in-out; /* アニメーションのタイミング関数を指定 */
+  }
+}
+
+@keyframes hoverScale{
+  from{
+    width: 24px;
+    height: 24px;
+  }
+  to{
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@keyframes scaleOpacity {
+  0% {
+    opacity: .5;
+    width: 24px;
+    height: 24px;
+  }
+  50%{
+    width: 30px;
+    height:30px;
+  }
+  100% {
+    opacity: 1;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+ 
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes translate {
+  0% {
+    transform: translateX(-20px);
+  }
+ 
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.simpleParallax{
+  height:100% !important;
+}
+
+.u-block{
+  display: block;
+  opacity: 1;
+  transition: .5s;
+  transition-property: all;
+}
+
+.u-opacity{
+  opacity: 0;
+}
+
+.u-top{
+  position: fixed;
+  font-size: 2rem;
+  padding:20px 10px;
+  background:#04c904;;
+  right: 0;
+  bottom:0;
+  z-index: 99999;
+  text-orientation: mixed; /* テキストの向きを混合（縦および横）にする */
+  color:#fff;
+  font-family: $NotoSerif;
+  display: none;
+  @include mq(){
+    padding: 10px 5px;
+  }
+}
+
+.u-bold{
+  font-weight: bold;
+}
+
+
+

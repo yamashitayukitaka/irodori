@@ -1,0 +1,208 @@
+.p-form{
+  & .mwform-zip-field{
+    display: block;
+  }
+  &__strong{
+    background: #fff;
+    width: 250px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    padding:0 13px;
+    font-family: $yuMincho;
+    @include mq(lg){
+      margin-right: auto;
+      width:initial;
+      margin-bottom: 15px;
+    }
+  }
+  &__wrap{
+    background:#F4F4F4;
+    padding:39px 85px;
+    @include mq(lg){
+      padding: 5%;
+    }
+  }
+  &__txt{
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 80px;
+  }
+  &__required{
+    display: block;
+    width: 34px;
+    background:#00C000;
+    color: #fff;
+    font-family: $yuMincho;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mq(lg){
+      margin: 0 10px;
+    }
+  }
+ 
+  &__name{
+    background: #fff;
+    width: 459px;
+    height: 48px;
+    padding:0 13px;
+    border-radius:3px;
+  }
+  &__kana{
+    background: #fff;
+    width: 459px;
+    height: 48px;
+    padding:0 13px;
+    border-radius:3px;
+  }
+  &__input{
+    margin-bottom:25px;
+    display: flex;
+    align-items: center;
+    font-family: $yuMincho;
+    justify-content: space-between;
+    position: relative;
+    @include mq(lg){
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
+    &__box{
+      background: #fff !important;
+      width: 459px;
+      height: 48px;
+      padding: 0 13px;
+      border-radius:3px;
+      @include mq(lg){
+        width: 100%;
+      }
+    }
+    &__boxWrap{
+      display: block;
+      width: 459px;
+      height: 48px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      @include mq(lg){
+        width: 100%;
+        margin-right: auto;
+      }
+    }
+  }
+  &__what{
+    @extend .p-contact__input__box;
+  }
+  &__junre{
+    font-family: $yuMincho;
+    margin-left: 15px;
+    margin-bottom:5px;
+  }
+  &__tel{
+    background: #F4F4F4;
+    height: 40px;
+    border-radius:3px;
+    padding: 0 13px;
+    width: 30% !important;
+    @include mq(lg){
+      padding: 0;
+    }
+    &__wrap{
+      margin-bottom:25px;
+    }
+  }
+  &__mail{
+    background: #fff;
+    width: 459px;
+    height: 48px;
+    padding:0 13px;
+    border-radius:3px;
+    &__wrap{
+      margin-bottom:25px;
+    }
+  }
+  &__address{
+    background: #fff;
+    width: 459px;
+    height: 48px;
+    padding:0 13px;
+    border-radius:3px;
+    &__wrap{
+      margin-bottom:25px;
+    }
+  }
+  &__post{
+    background: #F4F4F4;
+    height: 40px;
+    border-radius:3px;
+    padding: 0 13px;
+    width: 30% !important;
+    @include mq(lg){
+      padding: 0;
+    }
+    &__wrap{
+      margin-bottom:25px;
+    }
+  }
+  &__consult{
+    border:solid 1px #ced4da;
+    background: #f5f8fa;
+    width: 100%;
+    padding:10px 13px;
+    border-radius:3px;
+    margin-bottom: 80px;
+  }
+  &__cord{
+    margin-bottom:25px;
+  }
+  &__button{
+    color:#fff;
+    background:#00C000;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 150px;
+    display: flex;
+    margin: auto;
+    cursor: pointer;
+    &:hover{
+      opacity: .8;
+    }
+    &__wrap{
+      width: 500px;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+  }
+}
+
+.mw_wp_form .error{
+  left: 135px;
+  top: 50%;
+  position: absolute;
+  color:red;
+  transform: translateY(-50%);
+  @include mq(lg){
+    left: 14px;
+    top: -12px;
+  }
+}
+
+.mwform-tel-field{
+  margin: 0 13px;
+  width: 100%;
+}
+
+.mwform-radio-field{
+  margin-left: 13px;
+}
+
+.mwform-zip-field{
+  margin-left: 13px;
+}
+

@@ -1,0 +1,90 @@
+.c-button{
+  width: 220px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+    &--jp{
+      @extend .c-button;
+      border:solid .5px #585757;
+      position: relative;
+      margin: auto;
+      letter-spacing:0.09em;
+      &::after{
+        content:"";
+        display: block;
+        width: 27px;
+        height: 4px;
+        background: url(../dist/img/common/rArrow.png);
+        background-size: cover;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+      }
+    }
+    &--contact{
+      @extend .c-button--jp;
+      width: 300px;
+    }
+    &--small{
+      font-size: 11px;
+      position: relative;
+      &::after{
+        content:"";
+        display: block;
+        width: 27px;
+        height: 4px;
+        background: url(../dist/img/common/rArrow.png);
+        background-size: cover;
+        position: absolute;
+        top: 50%;
+        right: -100%;
+        transform: translateY(-50%);
+      }
+    }
+    &--smallEn{
+      @extend .c-button--small;
+      font-family:$NotoSerif;
+      display: block;
+      &::after{
+        left: 100px;
+      }
+    }
+    &--smallEnLarge{
+      @extend .c-button--smallEn;
+      color: #fff;
+      font-size: 2rem;
+      &::after{
+        background: url(../dist/img/common/rArroww.png);
+        width: 60px;
+        height: 8px;
+        left: 110px;
+        background-size: cover !important;
+      }
+    }
+    &--smallEnRight{
+      @extend .c-button--smallEn;
+      width: 130px;
+      margin-left: auto;
+    }  
+    &--en{
+      @extend .c-button;
+      font-size: 9px;
+      background-color: #fff;
+      font-family: $NotoSerif;
+    }
+    &--event{
+      @extend .c-button--jp;
+      width: 320px;
+      @include mq(){
+        width: 220px;
+      }
+    }
+  }
+ 
+
+
+
+  

@@ -1,0 +1,62 @@
+.p-guideBtn{
+  &__imgWrap{
+    width: 290px;
+    height: 203px;
+    background:#F5F5F5;
+    position: relative;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
+    z-index: 10;
+    &--large{
+      @extend .p-guideBtn__imgWrap;
+      width: 375px;
+      height: 265px;
+    }
+    &__content{
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      &--large{
+        @extend .p-guideBtn__imgWrap__content;
+        justify-content: space-around;
+      }
+    }
+    &::after{
+      content:"";
+      display: flex;
+      width: 29px;
+      height: 29px;
+      background: url(../dist/img/common/guide01.png);
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 99;
+    }
+  }
+  &__img{
+    width: 246px;
+    height: 171px;
+    position: absolute;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    &--large{
+      @extend .p-guideBtn__img;
+      width: 317px;
+      height: 221px;
+    }
+  }
+  &__link{
+    display: block;
+    margin-bottom: 10px;
+    &:hover{
+      & .p-guideBtn__imgWrap{
+        box-shadow: none;
+        transform: translate(5px,5px);
+      }
+    }
+  }
+  &__term{
+    text-align: center;
+  }
+}

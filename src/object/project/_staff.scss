@@ -1,0 +1,118 @@
+.p-staff {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    width:calc(100% + (10% / 3));
+    transform: translateX(- (10% / 3 ));
+  }
+  
+  &__list__img {
+    display: block;
+    height: 180px;
+  }
+  
+  &__list__item {
+    width: 30%;
+    margin-left:calc(10%/3);
+    margin-bottom: 58px;
+    @include mq(smg){
+      width: 45%;
+    }
+    @include mq(sm){
+      width: 100%;
+    }
+  }
+  &__list__name {
+    font-size: 2rem;
+    margin-bottom: 7px;
+    text-align: center;
+    line-height: calc(27/20);
+    padding-top: 10px;
+  }
+  &__list__careea{
+    text-align: center;
+    font-size:1.8rem;
+    line-height: 1.4;
+    font-family: $NotoSerif;
+  }
+  &__list__position {
+    text-align: center;
+    font-size:1.8rem;
+    line-height: 1.4;
+    font-family: $NotoSerif;
+    margin-bottom: 5px;
+  }
+  
+  &__list__kana {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 23px;
+  }
+  
+  &__single {
+    padding-top: 150px;
+  }
+  &__single__txtWrap{
+    position: relative;
+    margin-bottom:80px;
+  }
+  &__single__txtWrapInner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include mq(){
+      position: initial;
+      margin-bottom: 15px;
+    }
+  }
+  &__single__company{
+    font-family: $NotoSerif;
+    @include mq(){
+      text-align: center;
+    }
+  }
+  &__single__logo{
+    width:10rem;
+    height:10rem;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    letter-spacing: 0.1em;
+    @include mq(){
+      margin-left: initial;
+      margin: auto;
+    }
+  }
+  &__single__date{
+    display: block;
+    margin-bottom:1.8rem;
+  }
+  &__single__name {
+    font-size: 3rem;
+    text-align: center;
+    font-family: $NotoSerif;
+    margin-bottom: 5px;
+  }
+  &__single__imgWrap{
+    overflow: hidden;
+    height: 400px;
+    margin-bottom: 50px;
+  }
+  &__dt {
+    margin-right: 0.5em;
+    font-size:18px;
+    letter-spacing: 0em;
+    font-weight: normal;
+    margin-bottom:1.4rem;
+    font-family: $yuGothic;
+    font-weight: bold;
+  }
+  
+  &__dd {
+    font-size:2rem;
+    letter-spacing: 0em;
+    font-weight: normal;
+    font-family: $yuGothic;
+    margin-bottom:6rem;
+  }
+}
+

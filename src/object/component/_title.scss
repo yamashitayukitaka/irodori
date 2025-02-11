@@ -1,0 +1,49 @@
+.c-title{
+ &--page{
+  font-size: 4.2rem;
+  font-family:$NotoSerif;
+  letter-spacing:0.09em;
+ }
+ &--section{
+  font-size:4.2rem;
+  letter-spacing:0.04em;
+  margin-bottom: 4px;
+  color:#656565;
+  font-family:$yuGothic;
+  font-weight: bold;
+ }
+ &--smallEn{
+  font-family:$NotoSerif;
+  font-size: 11px;
+ }
+ &--largeEn{
+  font-family:$NotoSerif;
+  font-size:3.6rem;
+ }
+ &--en{
+   display: block;
+   font-size:1.8rem;
+   font-style: italic;
+   text-align: center;
+   font-family:$NotoSerif;
+   font-size: 400;
+ }
+ &--addLine{
+  @extend .c-title--page;
+  position: relative;
+  text-align: center;
+  margin-bottom: 110px;
+  &::after{
+    content:"";
+    display: block;
+    width: 362px;
+    height: 5px;
+    background:#00C000;
+    position: absolute;
+    bottom:-13px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+  }
+ }
+}
